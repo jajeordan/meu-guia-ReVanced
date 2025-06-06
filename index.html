@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Visual: Instalação do YouTube ReVanced</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #f0f4f8, #e0e7ee); /* Fundo suave */
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem; /* Cantos mais arredondados */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Sombra mais suave */
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .step-icon-container {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 96px; /* w-24 */
+            height: 96px; /* h-24 */
+            background-color: #f8fafc; /* gray-50 */
+            border-radius: 9999px; /* full */
+            border: 2px solid #e2e8f0; /* gray-200 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        .step-number {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 700; /* font-bold */
+            color: #4b5563; /* gray-700 */
+            margin-bottom: 0.25rem; /* mb-1 */
+        }
+        .step-content {
+            text-align: center;
+            flex-grow: 1;
+        }
+        .step-title {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 600; /* font-semibold */
+            color: #1f2937; /* gray-800 */
+            margin-bottom: 1rem;
+        }
+        .step-description {
+            color: #4a5568; /* gray-600 */
+            line-height: 1.625; /* leading-relaxed */
+            margin-bottom: 1rem;
+        }
+        .step-image {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem; /* rounded-lg */
+            object-fit: cover;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            margin-top: 1rem;
+            transition: transform 0.2s ease-in-out;
+        }
+        .step-image:hover {
+            transform: scale(1.02);
+        }
+        .link-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1rem; /* px-4 py-2 */
+            background-color: #4f46e5; /* indigo-600 */
+            color: #ffffff;
+            font-weight: 500; /* font-medium */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            transition: background-color 0.2s ease-in-out;
+            text-decoration: none;
+            margin-top: 0.5rem;
+            font-size: 0.875rem; /* text-sm */
+        }
+        .link-button:hover {
+            background-color: #4338ca; /* indigo-700 */
+        }
+        .link-button svg {
+            margin-left: 0.5rem;
+            margin-right: -0.25rem;
+            width: 1rem;
+            height: 1rem;
+        }
+
+        /* Adaptação para telas maiores (desktop) */
+        @media (min-width: 768px) {
+            .card {
+                flex-direction: row;
+                text-align: left;
+                padding: 2.5rem;
+            }
+            .step-icon-container {
+                margin-right: 2rem;
+                margin-bottom: 0;
+            }
+            .step-content {
+                text-align: left;
+            }
+            .link-button {
+                font-size: 1rem; /* text-base */
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container">
+        <header class="text-center py-10">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                Guia Visual: Instalação do YouTube ReVanced
+            </h1>
+            <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+                Um passo a passo completo e fácil de seguir para instalar o YouTube ReVanced no seu Android.
+            </p>
+        </header>
+
+        <main class="flex flex-col items-center">
+            <!-- Step 1 -->
+            <div class="card w-full max-w-4xl">
+                <div class="step-icon-container">
+                    <span class="step-number">Passo 1</span>
+                    <i data-lucide="shield-off" class="text-red-500 w-12 h-12"></i>
+                </div>
+                <div class="step-content">
+                    <h3 class="step-title">Antes de Começar: Preparação Essencial</h3>
+                    <p class="step-description">Desative temporariamente o Google Play Protect para evitar bloqueios na instalação. Lembre-se de reativá-lo depois!</p>
+                    <img src="https://placehold.co/400x250/FEE2E2/EF4444?text=Google+Play+Protect+Desativado" alt="Captura de tela do Google Play Protect desativado" class="step-image"/>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="card w-full max-w-4xl">
+                <div class="step-icon-container">
+                    <span class="step-number">Passo 2</span>
+                    <i data-lucide="download" class="text-blue-500 w-12 h-12"></i>
+                </div>
+                <div class="step-content">
+                    <h3 class="step-title">Parte 1: Baixando os Arquivos Necessários (APKs)</h3>
+                    <p class="step-description">Baixe o ReVanced Manager e o APK do YouTube original em uma versão compatível. <b>NÃO INSTALE O YOUTUBE AINDA!</b></p>
+                    <div class="mt-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-4">
+                        <a href="https://revanced.app/download" target="_blank" rel="noopener noreferrer" class="link-button">
+                            Baixar ReVanced Manager
+                            <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>
+                        </a>
+                        <a href="https://www.apkmirror.com/apk/google-inc/youtube/youtube-20-12-46-release/youtube-20-12-46-2-android-apk-download/" target="_blank" rel="noopener noreferrer" class="link-button">
+                            Baixar YouTube APK (versão compatível)
+                            <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>
+                        </a>
+                    </div>
+                    <img src="https://placehold.co/400x250/DBEAFE/3B82F6?text=APKs+do+ReVanced+e+YouTube" alt="Ícones de download para ReVanced Manager e YouTube APK" class="step-image"/>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="card w-full max-w-4xl">
+                <div class="step-icon-container">
+                    <span class="step-number">Passo 3</span>
+                    <i data-lucide="puzzle" class="text-purple-500 w-12 h-12"></i>
+                </div>
+                <div class="step-content">
+                    <h3 class="step-title">Parte 2: Aplicando o Patch com o ReVanced Manager</h3>
+                    <p class="step-description">Instale e abra o ReVanced Manager. Permita fontes desconhecidas se solicitado. Em "Patcher", selecione o APK do YouTube que você baixou.</p>
+                    <img src="https://placehold.co/400x250/EDE9FE/8B5CF6?text=Interface+ReVanced+Patcher" alt="Captura de tela da interface do ReVanced Manager na seção Patcher" class="step-image"/>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="card w-full max-w-4xl">
+                <div class="step-icon-container">
+                    <span class="step-number">Passo 4</span>
+                    <i data-lucide="settings" class="text-gray-500 w-12 h-12"></i>
+                </div>
+                <div class="step-content">
+                    <h3 class="step-title">Configurações Opcionais (Mas Recomendadas)</h3>
+                    <p class="step-description">Nas configurações do ReVanced Manager, desative "Salvar aplicativo corrigido" e "Atualização automática de patches" para evitar bugs.</p>
+                    <img src="https://placehold.co/400x250/F3F4F6/6B7280?text=Configurações+ReVanced+Manager" alt="Captura de tela das configurações do ReVanced Manager" class="step-image"/>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="card w-full max-w-4xl">
+                <div class="step-icon-container">
+                    <span class="step-number">Passo 5</span>
+                    <i data-lucide="upload" class="text-green-500 w-12 h-12"></i>
+                </div>
+                <div class="step-content">
+                    <h3 class="step-title">Parte 3: Exportando e Instalando</h3>
+                    <p class="step-description">Após o processo de patch, exporte (salve) o novo APK do YouTube ReVanced para o seu celular e instale-o.</p>
+                    <img src="https://placehold.co/400x250/D1FAE5/10B981?text=APK+ReVanced+Pronto" alt="Ícone de exportar e instalar o APK do YouTube ReVanced" class="step-image"/>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="card w-full max-w-4xl">
+                <div class="step-icon-container">
+                    <span class="step-number">Passo 6</span>
+                    <i data-lucide="check-circle" class="text-teal-500 w-12 h-12"></i>
+                </div>
+                <div class="step-content">
+                    <h3 class="step-title">Pronto! Finalização</h3>
+                    <p class="step-description">Agora você pode desfrutar do YouTube ReVanced! <b>Lembre-se de reativar o Google Play Protect</b> na Play Store para manter seu dispositivo seguro.</p>
+                    <img src="https://placehold.co/400x250/CCFBF1/0D9488?text=Reativar+Play+Protect" alt="Ícone de verificação e lembrete para reativar o Google Play Protect" class="step-image"/>
+                </div>
+            </div>
+        </main>
+
+        <footer class="text-center py-8 text-gray-600 text-sm">
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> Guia ReVanced. Todos os direitos reservados.</p>
+            <p class="mt-2">Lembre-se: Use esta ferramenta com responsabilidade e siga as instruções cuidadosamente.</p>
+        </footer>
+    </div>
+    <script>
+        // Inicializa os ícones Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
+  
